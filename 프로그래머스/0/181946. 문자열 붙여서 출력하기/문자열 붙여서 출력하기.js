@@ -11,5 +11,8 @@ rl.on('line', function (line) {
 }).on('close', function () {
     str1 = input[0];
     str2 = input[1];
-    console.log(str1+str2)
+    
+}).on('line',(line) => {
+    const splitLine = line.split(" ")
+    console.log(splitLine.join(''))
 });
