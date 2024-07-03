@@ -11,11 +11,11 @@ rl.on('line', function (line) {
 }).on('close',function(){
     str = input[0];
     let sumstring = ''
-    for(let i = 0; i < str.length;i++){
-        str[i] === str[i].toUpperCase() 
-            ? (sumstring += str[i].toLowerCase()) 
-            : (sumstring += str[i].toUpperCase())
-    }
-    console.log(sumstring)
+    const sum = [...str].map(it => 
+                 it.charCodeAt() > 96 
+                 ? String.fromCharCode(it.charCodeAt() - 32) 
+                 : String.fromCharCode(it.charCodeAt() + 32))
+    .join('')
+    console.log(sum)
     
 });
