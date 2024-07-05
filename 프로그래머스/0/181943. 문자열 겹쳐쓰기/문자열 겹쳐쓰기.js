@@ -1,6 +1,11 @@
 function solution(my_string, overwrite_string, s) {
-    return my_string.slice(0,s) 
-        + overwrite_string 
-        + my_string.slice(overwrite_string.length 
-                          + s, my_string.length)
+    let result = ''
+    for(let i = 0; i < s; i++) {
+        result += my_string[i]
+    }
+    result += overwrite_string
+    for(let j = overwrite_string.length + s; j < my_string.length; j++ ){
+        result += my_string[j]
+    }
+    return result
 }
