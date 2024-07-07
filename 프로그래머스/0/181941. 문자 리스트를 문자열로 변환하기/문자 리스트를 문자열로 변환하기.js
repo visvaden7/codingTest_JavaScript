@@ -1,3 +1,4 @@
 function solution(arr) {
-    return arr.join('')
+    const result = arr.reduce((result,char) => `${result}${char}`,"")
+    return result
 }
