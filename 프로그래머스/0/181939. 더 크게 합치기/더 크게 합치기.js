@@ -1,7 +1,7 @@
 function solution(a, b) {
-    answerAB = `${a}${b}`
-    answerBA = `${b}${a}`
-    return answerAB > answerBA
+    let answerAB = `${a}${b}`
+    let answerBA = `${b}${a}`
+    return parseInt(answerAB) > parseInt(answerBA)
         ? parseInt(answerAB)
         : parseInt(answerBA)
 }
