@@ -1,3 +1,3 @@
 function solution(arr) {
-    return arr.reduce((result,char) => `${result}${char}`,"")
+    return arr.reduce((string, char) => string + char)
 }
