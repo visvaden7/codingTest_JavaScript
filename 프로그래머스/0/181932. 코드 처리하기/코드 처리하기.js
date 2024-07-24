@@ -15,21 +15,18 @@
 
 function solution(code) {
     let mode = true
-    let sum = ""
-    let ret = code.split('').map((char, idx) => {
+    let ret =""
+    code.split('').forEach((char,idx) => {
+        let even = !(idx%2)
+        let check = mode ? even : !even
         if(char === "1"){
             mode = !mode
-        }
-        let even = !(idx % 2)
-        let odd = Boolean(idx % 2)
-        return mode 
-            ? even && char !== "1" 
-                ? char
-                : sum
-            : odd && char !== "1"
-                ? char
-                : sum
+        } else {
+            check 
+                ? ret += char 
+                : "" 
+        }     
     })
+    return ret.length > 0 ? ret : "EMPTY"
     
-    return ret.join("").length > 0 ? ret.join("") :"EMPTY"  
 }
