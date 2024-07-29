@@ -1,11 +1,5 @@
 function solution(a, d, included) {
-    var answer = 0;
-    let tmp = a
-    included.forEach((element) => {
-        if(element){
-            answer += tmp
-        }
-        tmp += d
-    })
-    return answer;
+    return included.reduce((answer, flag, idx) => {
+        return flag ? answer + a + d * idx : answer
+    },0)
 }
