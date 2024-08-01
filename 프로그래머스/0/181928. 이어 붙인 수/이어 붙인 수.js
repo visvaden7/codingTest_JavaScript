@@ -8,5 +8,5 @@ function solution(num_list) {
             even += num
         }
     })
-    return Number(odd) + Number(even);
+    return +odd + +even;
 }
